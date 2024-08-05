@@ -2,10 +2,6 @@ import pandas as pd
 import streamlit as st
 
 
-def reload_dataframe(df):
-    df
-
-
 def agregar_campeon(nombre, rol, vida_base, mana_base, armadura_base, daño_ataque_base, oro):
 
     encabezado = ["Nombre", "Rol", "Vida base",

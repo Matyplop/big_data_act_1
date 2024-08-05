@@ -1,7 +1,6 @@
 import streamlit as st
-from functions import *
+from functions import agregar_campeon, buscar_campeon
 import pandas as pd
-import time
 encabezado = ["Nombre", "Rol", "Vida base",
               "Mana base", "Armadura base", "Daño ataque base", "Eficiencia de Oro"]
 
