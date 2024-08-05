@@ -95,7 +95,7 @@ elif selected == options[3]:
                 "Daño ataque base", value=champion_data["Daño ataque base"])
             eficiencia_oro = st.number_input(
                 "Eficiencia de Oro", value=champion_data["Eficiencia de Oro"])
-        submit_button3 = st.form_submit_button(label='Guardar cambios')
+            submit_button3 = st.form_submit_button(label='Guardar cambios')
 
         if submit_button3:
             with st.spinner("Generando cambios.."):
