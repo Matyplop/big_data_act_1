@@ -100,7 +100,6 @@ elif selected == options[3]:
 
         if submit_button3:
             with st.spinner("Generando cambios.."):
-                time.sleep(1)
                 st.balloons()
 
             df.loc[df['Nombre'] == seleccionar_campeon, 'Vida base'] = vida_base
