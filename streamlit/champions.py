@@ -11,7 +11,7 @@ roles_disponibles = ['Support', 'Mid', 'ADC', 'Jungle', 'Top']
 # logo = st.sidebar.image("./logito.png", width=200)
 
 
-df = pd.read_csv("champions.csv", names=encabezado, skiprows=1)
+df = pd.read_csv("./champions.csv", names=encabezado, skiprows=1)
 
 
 st.write("### Bienvenido a la base de datos de campeones de LoL")
