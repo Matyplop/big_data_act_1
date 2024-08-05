@@ -26,7 +26,7 @@ def buscar_campeon(selected_type, data):
     encabezado = ["Nombre", "Rol", "Vida base",
                   "Mana base", "Armadura base", "Daño ataque base", "Eficiencia de Oro"]
 
-    df = pd.read_csv("../champions.csv", names=encabezado, skiprows=1)
+    df = pd.read_csv("champions.csv", names=encabezado, skiprows=1)
     if type(data) is not str:
         resultados = df[df[selected_type] == data]
     else:

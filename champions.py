@@ -112,6 +112,6 @@ elif selected == options[3]:
                    'Eficiencia de Oro'] = eficiencia_oro
 
             # el "w" pensé que funcionaba pero no
-            df.to_csv("../champions.csv", mode='w', index=False)
+            df.to_csv("champions.csv", mode='w', index=False)
 
     st.dataframe(df)  # ahi lo dejé afuera
