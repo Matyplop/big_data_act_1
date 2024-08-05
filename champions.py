@@ -28,9 +28,9 @@ if selected == options[1]:
 
             "Ingresa nombre",
         )
-        Rol = st.text_input(
-            "Ingresa Rol",
-        )
+        Rol = st.selectbox(
+            "Rol", roles_disponibles)
+
         Vida_base = st.text_input(
             "Ingresa Vida base",
         )
