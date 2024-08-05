@@ -54,7 +54,7 @@ if selected == options[1]:
     if submit_button:
         df2 = agregar_campeon(Nombre, Rol, Vida_base, Mana_base,
                               Armadura_base, Daño_ataque_base, Eficiencia_de_oro)
-        df2.to_csv('../champions.csv', mode='w', index=False)
+        df2.to_csv('champions.csv', mode='w', index=False)
         df_show.empty()
         df2
 
