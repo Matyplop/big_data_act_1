@@ -7,7 +7,7 @@ def agregar_campeon(nombre, rol, vida_base, mana_base, armadura_base, daño_ataq
     encabezado = ["Nombre", "Rol", "Vida base",
                   "Mana base", "Armadura base", "Daño ataque base", "Eficiencia de Oro"]
 
-    df = pd.read_csv("../champions.csv", names=encabezado, skiprows=1)
+    df = pd.read_csv("champions.csv", names=encabezado, skiprows=1)
     campeon = pd.DataFrame({
         'Nombre': [nombre],
         'Rol': [rol],
