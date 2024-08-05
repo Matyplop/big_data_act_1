@@ -8,7 +8,7 @@ encabezado = ["Nombre", "Rol", "Vida base",
 roles_disponibles = ['Support', 'Mid', 'ADC', 'Jungle', 'Top']
 
 
-logo = st.sidebar.image("./logito.png", width=200)
+# logo = st.sidebar.image("./logito.png", width=200)
 
 
 df = pd.read_csv("../champions.csv", names=encabezado, skiprows=1)
