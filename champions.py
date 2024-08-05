@@ -76,12 +76,10 @@ elif selected == options[2]:
         df3
 
 elif selected == options[3]:
+    seleccionar_campeon = st.sidebar.selectbox(
+        "Selecciona Campeón a modificar", df["Nombre"])
     with st.sidebar.form(key='my_form'):
-        seleccionar_campeon = st.selectbox(
-            "Selecciona Campeón a modificar", df["Nombre"].unique())
-
         if seleccionar_campeon:
-            # que empiece en la primera fila , en donde está el campeon
             champion_data = df[df['Nombre'] == seleccionar_campeon].iloc[0]
             rol = st.selectbox(
                 "Rol", roles_disponibles, index=roles_disponibles.index(champion_data["Rol"]))
@@ -101,9 +99,12 @@ elif selected == options[3]:
             with st.spinner("Generando cambios.."):
                 st.balloons()
 
-            df.loc[df['Nombre'] == seleccionar_campeon, 'Vida base'] = vida_base
-            df.loc[df['Nombre'] == seleccionar_campeon, 'Rol'] = rol
-            df.loc[df['Nombre'] == seleccionar_campeon, 'Mana base'] = mana_base
+            df.loc[df['Nombre'] == seleccionar_campeon,
+                   'Vida base'] = vida_base
+            df.loc[df['Nombre'] == seleccionar_campeon,
+                   'Rol'] = rol
+            df.loc[df['Nombre'] == seleccionar_campeon,
+                   'Mana base'] = mana_base
             df.loc[df['Nombre'] == seleccionar_campeon,
                    'Armadura base'] = armadura_base
             df.loc[df['Nombre'] == seleccionar_campeon,
