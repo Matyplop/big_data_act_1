@@ -19,9 +19,9 @@ options = ['Selecciona una opción', 'Ingresar nuevo campeón',
 selected = st.sidebar.selectbox(
     '¿Que acción desea realizar?', options)
 
-
 if selected == options[1]:
     df_show = st.dataframe(df)
+    valor_predeterminado_vida = 100  # un valor cualquiera
     with st.sidebar.form(key='my_form'):
 
         Nombre = st.text_input(
@@ -31,24 +31,24 @@ if selected == options[1]:
         Rol = st.selectbox(
             "Rol", roles_disponibles)
 
-        Vida_base = st.text_input(
-            "Ingresa Vida base",
+        Vida_base = st.number_input(
+            "Vida base", value=float(valor_predeterminado_vida)
         )
 
-        Mana_base = st.text_input(
-            "Ingresa Mana base",
+        Mana_base = st.number_input(
+            "Mana base", value=float(valor_predeterminado_vida)
         )
 
-        Armadura_base = st.text_input(
-            "Ingresa Armadura base",
+        Armadura_base = st.number_input(
+            "Armadura base", value=float(valor_predeterminado_vida)
         )
 
-        Daño_ataque_base = st.text_input(
-            "Ingresa daño de ataque base ",
+        Daño_ataque_base = st.number_input(
+            "daño de ataque base ", value=float(valor_predeterminado_vida)
         )
 
-        Eficiencia_de_oro = st.text_input(
-            "Ingresa Eficiencia de oro",
+        Eficiencia_de_oro = st.number_input(
+            "Eficiencia de oro", value=float(valor_predeterminado_vida)
         )
         submit_button = st.form_submit_button(label='Agregar')
     if submit_button:
