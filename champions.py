@@ -84,15 +84,15 @@ elif selected == options[3]:
             rol = st.selectbox(
                 "Rol", roles_disponibles, index=roles_disponibles.index(champion_data["Rol"]))
             vida_base = st.number_input(
-                "Vida base", value=champion_data["Vida base"])
+                "Vida base", value=float(champion_data["Vida base"]))
             mana_base = st.number_input(
-                "Mana base", value=champion_data["Mana base"])
+                "Mana base", value=float(champion_data["Mana base"]))
             armadura_base = st.number_input(
-                "Armadura base", value=champion_data["Armadura base"])
+                "Armadura base", value=float(champion_data["Armadura base"]))
             dano_ataque_base = st.number_input(
-                "Daño ataque base", value=champion_data["Daño ataque base"])
+                "Daño ataque base", value=float(champion_data["Daño ataque base"]))
             eficiencia_oro = st.number_input(
-                "Eficiencia de Oro", value=champion_data["Eficiencia de Oro"])
+                "Eficiencia de Oro", value=float(champion_data["Eficiencia de Oro"]))
             submit_button3 = st.form_submit_button(label='Guardar cambios')
 
         if submit_button3:
