@@ -19,6 +19,8 @@ options = ['Selecciona una opción', 'Ingresar nuevo campeón',
 selected = st.sidebar.selectbox(
     '¿Que acción desea realizar?', options)
 
+if selected == options[0]:
+    df
 if selected == options[1]:
     df_show = st.dataframe(df)
     valor_predeterminado_vida = 100  # un valor cualquiera
@@ -59,13 +61,18 @@ if selected == options[1]:
         df2
 
 elif selected == options[2]:
+    selected_type = st.sidebar.selectbox(
+        'Seleccione tipo de dato', encabezado)
     with st.sidebar.form(key='my_form'):
-        selected_type = st.selectbox(
-            'Seleccione tipo de dato', encabezado)
+        if (selected_type == encabezado[0] or selected_type == encabezado[1]):
+            data = st.text_input(
+                "Ingrese parametro de busqueda",
+            )
+        else:
+            data = st.number_input(
+                "Ingrese parametro de busqueda",
+            )
 
-        data = st.text_input(
-            "Ingrese parametro de busqueda",
-        )
         submit_button2 = st.form_submit_button(label='Aceptar')
     if submit_button2:
         if selected_type == encabezado[6]:
