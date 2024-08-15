@@ -12,7 +12,7 @@ logo = st.sidebar.image("./logito.png", width=200)
 
 df = pd.read_csv('champions.csv', names=encabezado, skiprows=1)
 
-st.page_link("champions.py", label="Home", icon="🏠")
+st.page_link("champions.py", label="Homes", icon="🏠")
 
 
 
